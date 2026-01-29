@@ -1,35 +1,21 @@
 package Jeu;
 import java.util.*;
 public class Equipe {
-    private String joueur_1;
-    private String joueur_2;
-    private String joueur_3;
-    private String joueur_4;
+//Attributs
+    private List<String> joueurs;
     private String nomEquipe;
     private int numEquipe;
-
-
+    for (aquals('joueur_'+i))
+//Constructeur
     public Equipe(String nomEquipe, int numEquipe) {
         this.nomEquipe = nomEquipe;
         this.numEquipe = numEquipe;
     }
 
-//Geteur/Seteur
-    public String getJoueur_1 ()
+//Geteurs/Seteurs
+    public Equipe(String nomEquipe)
     {
-        return joueur_1;
-    }
-    public String getJoueur_2 ()
-    {
-        return joueur_2;
-    }
-    public String getJoueur_3 ()
-    {
-        return joueur_3;
-    }
-    public String getJoueur_4 ()
-    {
-        return joueur_4;
+        this.nomEquipe = nomEquipe;
     }
     public String getNomEquipe ()
     {
@@ -39,21 +25,8 @@ public class Equipe {
     {
         return numEquipe;
     }
-    public void setJoueur_1 (String joueur_1)
-    {
-        this.joueur_1 = joueur_1;
-    }
-    public void setJoueur_2 (String joueur_2)
-    {
-        this.joueur_2 = joueur_2;
-    }
-    public void setJoueur_3 (String joueur_3)
-    {
-        this.joueur_3 = joueur_3;
-    }
-    public void setJoueur_4 (String joueur_4)
-    {
-    this.joueur_4 = joueur_4;
+    public void setJoueurs(List<String> joueurs) {
+        this.joueurs = joueurs;
     }
     public void setNomEquipe (String nomEquipe)
     {
@@ -62,5 +35,14 @@ public class Equipe {
     public void setNumEquipe ( int numEquipe)
     {
     this.numEquipe = numEquipe;
+    }
+
+    public void ajouterJoueur(String joueur)
+    {
+        joueurs.add(joueur);
+    }
+    public void supprimerJoueur(String joueur)
+    {
+        joueurs.remove(joueur);
     }
 }
