@@ -5,13 +5,12 @@ public class Equipe {
     private List<String> joueurs;
     private String nomEquipe;
     private int numEquipe;
-    for (aquals('joueur_'+i))
 //Constructeur
-    public Equipe(String nomEquipe, int numEquipe) {
+    public Equipe(String nomEquipe, int numEquipe)
+    {
         this.nomEquipe = nomEquipe;
         this.numEquipe = numEquipe;
     }
-
 //Geteurs/Seteurs
     public Equipe(String nomEquipe)
     {
