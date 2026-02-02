@@ -1,4 +1,8 @@
 package Jeu;
+import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class Carte
 {
@@ -62,7 +66,20 @@ public class Carte
     {
         Carte carte = new Carte();
         numeroCarte = carte.getNumeroCarte();
-        //Il faut attribuer le numero de la carte pour avoir une carte
+        // ça permet de lire un fichier et une ligne particulière (br.readline)
+        // try/catch c'est la gestion d'erreur
+        try (BufferedReader br = new BufferedReader(new FileReader("filename.txt")))
+        {
+            String line;
+            while ((line = br.readLine()) != null)
+            {
+                System.out.println(line);
+            }
+        }
+        catch (IOException e)
+        {
+            System.out.println("Error reading file.");
+        }
         return carte;
     }
 }
