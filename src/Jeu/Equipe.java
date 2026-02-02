@@ -1,6 +1,7 @@
 package Jeu;
 import java.util.*;
-public class Equipe {
+public class Equipe
+{
 //Attributs
     private List<String> joueurs;
     private String nomEquipe;
